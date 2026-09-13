@@ -1,0 +1,262 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Flood susceptibility, District Jhang | Adnan Abbas Shah </title> <meta name="author" content="Adnan Abbas Shah"> <meta name="description" content="Six ML models on Landsat, Sentinel-2, SRTM and CHIRPS"> <meta name="keywords" content="Adnan Abbas Shah, GIS, remote sensing, Google Earth Engine, drought, SPI, SPEI, CMIP6, ERA5, machine learning, Pakistan, South Asia, climate extremes"> <meta property="og:site_name" content="Adnan Abbas Shah"> <meta property="og:type" content="website"> <meta property="og:title" content="Adnan Abbas Shah | Flood susceptibility, District Jhang"> <meta property="og:url" content="https://adnanabbasshah.github.io/projects/3_flood/"> <meta property="og:description" content="Six ML models on Landsat, Sentinel-2, SRTM and CHIRPS"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Flood susceptibility, District Jhang"> <meta name="twitter:description" content="Six ML models on Landsat, Sentinel-2, SRTM and CHIRPS"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Adnan Abbas Shah"
+        },
+        "url": "https://adnanabbasshah.github.io/projects/3_flood/",
+        "@type": "WebSite",
+        "description": "Six ML models on Landsat, Sentinel-2, SRTM and CHIRPS",
+        "headline": "Flood susceptibility, District Jhang",
+        
+        "sameAs": [null,"https://github.com/adnanabbasshah","https://www.linkedin.com/in/adnan-abbas-shah","https://orcid.org/0009-0009-0435-9161","https://scholar.google.com/citations?user=D7YV-1wAAAAJ","https://twitter.com/syedadnanshahn","https://wa.me/923450921121"],
+        
+        "name": "Adnan Abbas Shah",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%9B%B0%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://adnanabbasshah.github.io/projects/3_flood/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Adnan</span> Abbas Shah </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Flood susceptibility, District Jhang</h1> <p class="post-description">Six ML models on Landsat, Sentinel-2, SRTM and CHIRPS</p> </header> <article> <p>Flood susceptibility mapping for District Jhang using six machine learning models: RNN, ANN, Random Forest, MLP, SVM and KNN. Conditioning factors were derived from Landsat, Sentinel-2, SRTM, CHIRPS and Dynamic World.</p> <p>KNN and RNN performed best, both reaching AUC = 0.99. Between 27.2% and 39% of the study area falls into high or very high susceptibility classes depending on the model. A Google Earth Engine web app accompanies the paper for interactive inspection of conditioning factors and the final susceptibility surfaces.</p> <p>Published at IEEE FIT 2024.</p> </article> <h2>References</h2> <div class="publications"> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Adnan Abbas Shah. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Journal articles and conference papers, newest first.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Research tools, analyses and consulting work.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Education, experience, skills and awards. PDF available above.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "post-march-2026-southwest-heat-dome-arizona-10-c-above-normal",
+        
+          title: "March 2026 Southwest heat dome, Arizona +10 °C above normal",
+        
+        description: "ERA5 anomaly analysis of an extreme early-season warm event",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/southwest-heat-dome/";
+          
+        },
+      },{id: "post-fujairah-drone-strike-seen-from-space",
+        
+          title: "Fujairah drone strike seen from space",
+        
+        description: "Meteosat imagery of smoke plumes over Port of Fujairah",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/fujairah-from-space/";
+          
+        },
+      },{id: "post-unusual-winter-dryness-across-south-asia-january-to-february-2026",
+        
+          title: "Unusual winter dryness across South Asia, January to February 2026",
+        
+        description: "Below-normal precipitation across more than half the region",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/south-asia-winter-dryness/";
+          
+        },
+      },{id: "post-who-can-reach-a-clinic-in-time-pakistan-39-s-healthcare-accessibility-gap",
+        
+          title: "Who can reach a clinic in time? Pakistan&#39;s healthcare accessibility gap",
+        
+        description: "Share of population within 10 to 60 minutes of a primary facility",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/healthcare-accessibility/";
+          
+        },
+      },{id: "post-building-a-bivariate-climate-map-of-pakistan-with-gee-and-r",
+        
+          title: "Building a bivariate climate map of Pakistan with GEE and R",
+        
+        description: "A reproducible temperature and precipitation workflow",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/bivariate-climate-map/";
+          
+        },
+      },{id: "post-2022-south-asia-heatwave-atmospheric-heat-dome-visualization",
+        
+          title: "2022 South Asia heatwave, atmospheric heat dome visualization",
+        
+        description: "ERA5 850 hPa temperature anomalies with 500 hPa geopotential height",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/south-asia-heatwave-visualization/";
+          
+        },
+      },{id: "news-flood-susceptibility-mapping-paper-presented-at-ieee-fit-2024",
+          title: 'Flood susceptibility mapping paper presented at IEEE FIT 2024.',
+          description: "",
+          section: "News",},{id: "news-started-as-gis-consultant-at-sustainable-environmental-management-sem-pvt-ltd-islamabad",
+          title: 'Started as GIS Consultant at Sustainable Environmental Management (SEM) Pvt. Ltd., Islamabad.',
+          description: "",
+          section: "News",},{id: "news-entropy-based-drought-characterization-of-the-jhelum-river-basin-under-review-at-hydrological-sciences-journal",
+          title: 'Entropy-based drought characterization of the Jhelum River Basin under review at Hydrological Sciences...',
+          description: "",
+          section: "News",},{id: "news-weap-based-water-demand-and-supply-study-of-the-kabul-river-basin-out-in-water-conservation-science-and-engineering",
+          title: 'WEAP-based water demand and supply study of the Kabul River Basin out in...',
+          description: "",
+          section: "News",},{id: "news-paper-on-cropland-dynamics-and-food-security-in-punjab-published-in-environmental-monitoring-and-assessment",
+          title: 'Paper on cropland dynamics and food security in Punjab published in Environmental Monitoring...',
+          description: "",
+          section: "News",},{id: "projects-pakgeo",
+          title: 'PakGeo',
+          description: "AI-powered Pakistan LULC and geospatial intelligence platform",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_pakgeo/";
+            },},{id: "projects-thal-desert-greening",
+          title: 'Thal Desert greening',
+          description: "Multi-decadal vegetation and thermal trends, 1990-2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_thal/";
+            },},{id: "projects-flood-susceptibility-district-jhang",
+          title: 'Flood susceptibility, District Jhang',
+          description: "Six ML models on Landsat, Sentinel-2, SRTM and CHIRPS",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_flood/";
+            },},{id: "projects-web-gis-dashboards",
+          title: 'Web GIS dashboards',
+          description: "Consulting delivery for environmental and cadastral projects",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_webgis/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/adnan_abbas_shah_cv.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%73%79%65%64%61%64%6E%61%6E%73%68%61%68%6E@%79%61%68%6F%6F.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/adnanabbasshah", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/adnan-abbas-shah", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0009-0009-0435-9161", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=D7YV-1wAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/syedadnanshahn", "_blank");
+        },
+      },{
+        id: 'social-whatsapp',
+        title: 'whatsapp',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://wa.me/923450921121", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
