@@ -1,0 +1,114 @@
+cv:
+  name: Adnan Abbas Shah
+  label: GIS Consultant and Remote Sensing Researcher
+  email: syedadnanshahn@yahoo.com
+  location: Islamabad, Pakistan
+  image: ""
+  summary: >
+    Remote sensing and GIS researcher working on hydroclimatic extremes, land cover change and
+    geospatial machine learning across South Asia. MSc in Remote Sensing and GIS, COMSATS
+    University Islamabad. First and corresponding author across Springer, Elsevier and IEEE venues.
+
+  social_networks:
+    - network: LinkedIn
+      username: adnan-abbas-shah
+    - network: GitHub
+      username: adnanabbasshah
+    - network: X
+      username: syedadnanshahn
+
+  sections:
+    Education:
+      - institution: COMSATS University Islamabad
+        location: Islamabad, Pakistan
+        area: Remote Sensing and GIS
+        studyType: MSc
+        start_date: 2023-02
+        end_date: 2025-03
+        score: "CGPA 3.62 / 4.00"
+        courses: "Geostatistics, Satellite Meteorology, Advanced Remote Sensing, Advanced GIS, Land Surveying"
+        highlights:
+          - "Thesis: Machine learning based agricultural land degradation assessment due to rapid urbanization. Advisor: Prof. Dr Muhammad Farooq Iqbal."
+          - Quantified agricultural land conversion to urban area across Punjab divisions, 1990-2023.
+          - Applied ML and DL algorithms to classify soil salinity and analyse its spatial distribution.
+          - Assessed long-term vegetation trends in desert regions and identified agriculturally suitable sites.
+
+      - institution: Government College University Faisalabad
+        location: Faisalabad, Pakistan
+        area: Geography
+        studyType: BSc
+        start_date: 2018-03
+        end_date: 2022-11
+        score: "CGPA 3.81 / 4.00"
+        courses: "Physical Geography, Human Geography, GIS, Remote Sensing, Environmental Science, Climate Change, Statistics, Research Methodology"
+        highlights:
+          - "Thesis: Urban demography of Jhang, Pakistan. Population trends, migration patterns, primary survey data and statistical demographic analysis."
+
+    Experience:
+      - company: Sustainable Environmental Management (SEM) Pvt. Ltd.
+        position: GIS Consultant
+        location: Islamabad, Pakistan
+        start_date: 2025-05
+        end_date: present
+        highlights:
+          - Led geospatial project delivery, environmental impact assessment support and client-facing advisory on remote sensing solutions.
+          - Oversaw Web GIS dashboards, spatial database and server management, and API integration.
+          - Directed predictive modelling, time series analysis and spatiotemporal anomaly detection workflows.
+
+      - company: Sustainable Environmental Management (SEM) Pvt. Ltd.
+        position: GIS Specialist
+        location: Islamabad, Pakistan
+        start_date: 2024-05
+        end_date: 2025-04
+        highlights:
+          - Performed predictive modelling, time series analysis and spatiotemporal anomaly detection.
+          - Developed Web GIS dashboards and spatial applications with Google Earth Engine, Python and JavaScript.
+          - Supported cadastral mapping, API integration and geospatial database management.
+
+      - company: Sustainable Environmental Management (SEM) Pvt. Ltd.
+        position: GIS Analyst
+        location: Islamabad, Pakistan
+        start_date: 2023-05
+        end_date: 2024-04
+        highlights:
+          - Spatial data processing, visualization and map production for environmental projects.
+          - Remote sensing analysis supporting environmental impact assessment.
+          - Geospatial database management and publication-ready cartography.
+
+      - company: Environmental and Air Quality Research Lab, COMSATS University Islamabad
+        position: GIS Analyst
+        location: Islamabad, Pakistan
+        start_date: 2022-11
+        end_date: 2023-04
+        highlights:
+          - "Geospatial analysis for air quality monitoring, modelling and prediction. Advisor: Dr. Jabir Hussain Syed."
+          - Co-organized a workshop on plastic waste recycling awareness and research.
+          - Spatial data processing and visualization for environmental research projects.
+
+    Skills:
+      - label: GIS and Remote Sensing
+        details: ArcGIS Pro, ArcMap, QGIS, ENVI, ERDAS Imagine, Google Earth Engine
+      - label: Programming
+        details: Python (GeoPandas, Rasterio, xarray, scikit-learn), R, JavaScript, SQL
+      - label: Web GIS and Databases
+        details: Leaflet, Mapbox, FastAPI, PostgreSQL, PostGIS, Docker
+      - label: Machine learning
+        details: Random Forest, SVM, KNN, ANN, RNN, MLP, image segmentation, spatial downscaling, LLMs and RAG
+      - label: Data
+        details: Landsat, Sentinel-1/2, MODIS, ERA5 and ERA5-Land, CHIRPS, GLDAS, CMIP6, Dynamic World, SRTM, LandScan
+
+    Awards:
+      - label: Best Student of the Session
+        details: Government College University Faisalabad, 2018-2022
+      - label: PEEF Scholarship
+        details: Punjab Educational Endowment Fund, fully funded merit scholarship
+      - label: PM Laptop Scheme Scholarship
+        details: Prime Minister's Youth Programme, Pakistan, 2023-2024
+
+    Research interests:
+      - label: Hydroclimatic extremes
+        details: Drought, heatwaves, compound drought-heatwave events, marine heatwaves
+      - label: Land and water
+        details: Land cover change, cropland dynamics, food security, groundwater and water budgets
+      - label: Methods
+        details: GeoAI, spatial machine learning, cloud-based Earth observation, CMIP6 downscaling
